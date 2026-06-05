@@ -1,1 +1,2 @@
  dnf update -y && dnf upgrade -y
+ dnf install net-tools open-vm-tools traceroute sshpass tcpdump vim git python3-pip nano -y
