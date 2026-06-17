@@ -1,2 +1,11 @@
  dnf update -y && dnf upgrade -y
  dnf install net-tools open-vm-tools traceroute sshpass tcpdump vim git python3-pip nano wget-y
+
+
+
+
+https://github.com/kubernetes/kubeadm/issues/182
+[root@vj-okd-113 ~]# systemctl set-environment HTTP_PROXY=http://proxy-wsa.esl.cisco.com:80/
+[root@vj-okd-113 ~]# systemctl set-environment HTTPS_PROXY=http://proxy-wsa.esl.cisco.com:80/
+[root@vj-okd-113 ~]# systemctl restart containerd.service
+[root@vj-okd-113 ~]# kubeadm config images pull
